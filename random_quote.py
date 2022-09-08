@@ -15,3 +15,6 @@ quote=(x['content'])
 author=(x['originator']['name'])
 ##print
 print(author,"said that ", quote)
+##result
+##Malala Yousafzai said that  It is so hard to get things done in this world. You try and too often it doesn't work. But you have to continue. And you never give up. 
+
