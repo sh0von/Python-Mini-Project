@@ -8,5 +8,7 @@ headers = {
 }
 
 response = requests.request("GET", url, headers=headers)
-
-print(response.text)
+x=response.json()
+quote=(x['content'])
+author=(x['originator']['name'])
+print(author,"said that ", quote)
