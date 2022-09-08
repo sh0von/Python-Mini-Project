@@ -1,22 +1,12 @@
 import requests
 
+url = "https://quotes15.p.rapidapi.com/quotes/random/"
 
-## function that gets the random quote
-def get_random_quote():
-	try:
-		## making the get request
-		response = requests.get("https://quote-garden.herokuapp.com/api/v3/quotes/random")
-		if response.status_code == 200:
-			## extracting the core data
-			json_data = response.json()
-			data = json_data['data']
+headers = {
+	"X-RapidAPI-Key": "4d8389b856msh70ace6f646a7918p101b48jsn0dce6744806f",
+	"X-RapidAPI-Host": "quotes15.p.rapidapi.com"
+}
 
-			## getting the quote from the data
-			print(data[0]['quoteText'])
-		else:
-			print("Error while getting quote")
-	except:
-		print("Something went wrong! Try Again!")
+response = requests.request("GET", url, headers=headers)
 
-
-get_random_quote()
+print(response.text)
