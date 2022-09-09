@@ -1,0 +1,15 @@
+import requests
+
+url = "https://wolframalphavolodimir-kudriachenkov1.p.rapidapi.com/createQuery"
+
+payload = "apiKey=%%3E&input=%3CREQUIRED%3E"
+headers = {
+	"content-type": "application/x-www-form-urlencoded",
+	"X-RapidAPI-Key": "4d8389b856msh70ace6f646a7918p101b48jsn0dce6744806f",
+	"X-RapidAPI-Host": "WolframAlphavolodimir-kudriachenkoV1.p.rapidapi.com"
+}
+
+response = requests.request("POST", url, data=payload, headers=headers)
+
+print(response.text)
+
